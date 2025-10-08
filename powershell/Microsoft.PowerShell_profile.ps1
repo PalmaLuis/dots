@@ -12,8 +12,9 @@ Write-Host @"
 
 #oh-my-posh --init --shell pwsh --config D:/dots/robbyrussell.json | Invoke-Expression # quita el comentario si quieres usar oh-my-posh
 Invoke-Expression (&starship init powershell) -- #para usar starship
-Invoke-Expression (& {(zoxide init powershell | Out-String)})
+Invoke-Expression (& { (zoxide init powershell | Out-String) })
 Import-Module -Name Terminal-Icons
+Import-Module posh-git
 
 # Saber donde se instalo un programa
 function which {
@@ -148,9 +149,35 @@ function anime {
   }
 }
 
+function Touch-File() {
+  $fileName = $args[0]
+  # Comprobar si el archivo existe
+  if (-not(Test-Path $fileName)) {
+      # Si no existe, crealo
+      New-Item -ItemType File -Name $fileName
+  }
+  else {
+      #Si existe, actualiza el timestamp
+      (Get-ChildItem $fileName).LastWriteTime = Get-Date
+  }
+}
+
+### Creando un alias para touch
+
+# Checar si el alias touch existe
+if (-not(Test-Path -Path Alias:Touch)) {
+  New-Alias -Name Touch Touch-File -Force
+}
+
+function lf { eza --icons -f }
+function lz { eza -a --group-directories-first --icons }
+function ld { eza -D --group-directories-first --icons }
+
+function lg { eza --group-directories-first --icons --git --git-repos }
+
 #ALIAS
 Set-Alias g git
-Set-Alias ls lsd
+Set-Alias ls lz
 
 # Import the Chocolatey Profile that contains the necessary code to enable
 # tab-completions to function for `choco`.
@@ -161,3 +188,15 @@ $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
 if (Test-Path($ChocolateyProfile)) {
   Import-Module "$ChocolateyProfile"
 }
+
+#f45873b3-b655-43a6-b217-97c00aa0db58 PowerToys CommandNotFound module
+
+Import-Module -Name Microsoft.WinGet.CommandNotFound
+#f45873b3-b655-43a6-b217-97c00aa0db58
+
+function gs { git status }
+function ga { git add $args }
+function gc { git commit -m $args }
+function gp { git push }
+function gpl { git pull }
+function gl { git log --oneline --graph --decorate }

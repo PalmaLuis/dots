@@ -16,15 +16,14 @@
     }
   ],
   "liveSassCompile.settings.autoprefix": [],
-  "workbench.iconTheme": "symbols",
   "editor.codeActionsOnSave": {},
   "editor.fontVariations": false,
   "workbench.sideBar.location": "right", // poner la barra de archivos a la derecha
   "files.associations": {
+    "*.embeddedhtml": "html",
     "*.sqlbook": "sql",
     "*.ndjson": "jsonl",
     "*.dbclient-js": "javascript",
-    "*.embeddedhtml": "html",
     ".env*": "dotenv"
   },
   "editor.tokenColorCustomizations": {
@@ -63,19 +62,14 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "css.lint.unknownAtRules": "ignore",
-  "editor.stickyScroll.enabled": false,
-  "breadcrumbs.enabled": false,
   "liveServer.settings.donotVerifyTags": true,
   "liveServer.settings.donotShowInfoMsg": true,
   "codesnap.containerPadding": "5em",
-  "workbench.colorTheme": "Aura Dracula Spirit (Soft)",
   "dotenv.enableAutocloaking": false,
   "database-client.autoSync": true,
   "editor.tabSize": 2,
   "liveServer.settings.CustomBrowser": "chrome",
-  "liveServer.settings.ChromeDebuggingAttachment": false,
-  // NUEVOS CAMBIOS
-  "workbench.editor.showTabs": "single", // ocultar todos los nombres de archivos abiertos ctrl k p ver archivos abiertos
+  "liveServer.settings.ChromeDebuggingAttachment": false, // ocultar todos los nombres de archivos abiertos ctrl k p ver archivos abiertos
   "editor.scrollbar.vertical": "hidden", // ocultar la barra de desplazamiento vertical
   "editor.overviewRulerBorder": false, // ocultar el borde del minimapa
   "editor.hideCursorInOverviewRuler": true,
@@ -84,10 +78,11 @@
   "indenticator.color.dark": "rgba(255,255,255,0.1)",
   "editor.glyphMargin": true, // para oculttar el debug puntos rojos
   "workbench.layoutControl.enabled": false,
-  "window.menuBarVisibility": "compact",
   "window.commandCenter": false,
-  "workbench.settings.applyToAllProfiles": ["editor.fontFamily"],
-  "window.zoomLevel": 1.1,
+  "workbench.settings.applyToAllProfiles": [
+    "editor.fontFamily"
+  ],
+  "window.zoomLevel": 0.9,
   "terminal.integrated.fontLigatures.enabled": true,
   "workbench.startupEditor": "none",
   "vscode-neovim.compositeKeys": {},
@@ -100,7 +95,42 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.statusBar.visible": false,
   "editor.matchBrackets": "never",
-  "workbench.activityBar.location": "hidden" // mejora el march brackers
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "breadcrumbs.enabled": false,
+  "vue.server.hybridMode": true,
+  "editor.renderWhitespace": "none",
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "workbench.preferredDarkColorTheme": "Aura Dracula Spirit (Soft)",
+  "window.systemColorTheme": "dark",
+  "workbench.preferredLightColorTheme": "Aura Dracula Spirit (Soft)",
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "editor.formatOnPaste": true,
+  "obsidian-md-vsc.defaultVault": "notes",
+  "obsidian-md-vsc.defaultVaultPath": "D:\\obsidian\\notes",
+  "obsidian-md-vsc.defaultNote": "templates\\note",
+  "workbench.colorTheme": "Moonlight II",
+  "workbench.iconTheme": "symbols",
+  "workbench.activityBar.location": "hidden",
+  "workbench.colorCustomizations": {},
+  "workbench.editor.editorActionsLocation": "hidden",
+  "editor.renderControlCharacters": false,
+  "window.menuBarVisibility": "compact",
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    },
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  } // mejora el march brackers
 }
