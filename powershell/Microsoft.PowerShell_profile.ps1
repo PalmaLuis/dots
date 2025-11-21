@@ -200,3 +200,10 @@ function gc { git commit -m $args }
 function gp { git push }
 function gpl { git pull }
 function gl { git log --oneline --graph --decorate }
+
+
+# Mostrar logo de Sentinel al entrar al proyecto
+$projectPath = "D:\projects\project-sentinel-SNT01"
+if ($PWD.Path -eq $projectPath) {
+    & "$projectPath\welcome.ps1"
+}

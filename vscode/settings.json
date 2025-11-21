@@ -113,8 +113,7 @@
   "obsidian-md-vsc.defaultVaultPath": "D:\\obsidian\\notes",
   "obsidian-md-vsc.defaultNote": "templates\\note",
   "workbench.colorTheme": "Moonlight II",
-  "workbench.iconTheme": "symbols",
-  "workbench.activityBar.location": "hidden",
+  "workbench.activityBar.location": "top",
   "workbench.colorCustomizations": {},
   "workbench.editor.editorActionsLocation": "hidden",
   "editor.renderControlCharacters": false,
@@ -132,5 +131,25 @@
   },
   "[github-actions-workflow]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
-  } // mejora el march brackers
+  },
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false
+  },
+  "[markdown]": {
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    }
+  },
+  "dart.flutterSdkPath": "D:\\flutter",
+  "workbench.iconTheme": "symbols",
+  "workbench.statusBar.visible": false
 }
