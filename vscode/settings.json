@@ -117,7 +117,7 @@
   "workbench.colorCustomizations": {},
   "workbench.editor.editorActionsLocation": "hidden",
   "editor.renderControlCharacters": false,
-  "window.menuBarVisibility": "compact",
+  "window.menuBarVisibility": "toggle",
   "[dockercompose]": {
     "editor.insertSpaces": true,
     "editor.tabSize": 2,
@@ -151,5 +151,7 @@
   },
   "dart.flutterSdkPath": "D:\\flutter",
   "workbench.iconTheme": "symbols",
-  "workbench.statusBar.visible": false
+  "workbench.statusBar.visible": false,
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1"
 }
