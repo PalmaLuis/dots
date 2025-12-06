@@ -1,50 +1,47 @@
-# Windows Config
+# Linux Config
 
-Instalar programas con winget, desde la pagina oficial
-`https://winstall.app`
+## Homebrew
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+echo >> /home/palmex/.bashrc
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/palmex/.bashrc
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+```
 
 ## LAZYVIM
-
-Todos los archivos de configuracion de Lazyvim se encuentran en `Users\luisp\AppData\local\nvim`
-Se debe crear un enlace simbolico de nvim
 
 Requerimientos para instalar Lazyvim
 
 Neovim
 
 ```bash
-winget install --id=Neovim.Neovim  -e
+brew install neovim
 ```
 
 Git
 
 ```bash
-winget install --id=Git.Git  -e
+brew install git
 ```
 
 Lazygit
 
 ```bash
-winget install --id=JesseDuffield.lazygit  -e
+brew install lazygit
 ```
 
 Instalar la NerdFont ubicada en `./fonts/DankMono Nerd Font/`
 
-1. Abrir el cmd en modo administrador
-2. Ejecutar el siguiente comando:
-
-```bash
-mklink /d C:\Users\luisp\AppData\local\nvim D:\dots\nvim
-```
-
 ## MEJORAR TERMINAL
 
-El archivo de configuracion de $PROFILE es `./powershell/Microsoft.PowerShell_profile.ps1`
+El archivo de configuracion de es `.bashrc`
 
 Crear un enlace simbolico con el siguiente comando
 
 ```bash
-mklink C:\Users\luisp\OneDrive\Documents\PowerShell\Microsoft.PowerShell_profile.ps1 D:\dots\powershell\Microsoft.PowerShell_profile.ps1
+ln -s /d/dots/gitbash/.bashrc ~/.bashrc
 ```
 
 Zoxide
@@ -55,49 +52,34 @@ winget install zoxide
 ```
 
 Starship
+mejora el aspecto de la terminal
 
 ```bash
-winget install --id=Starship.Starship  -e
+brew install starship
+eval "$(starship init bash)"
 ```
 
 FZF
+Es un buscador interactivo para la terminal
+history | fzf para buscar en el historial de comandos
 
 ```bash
-winget install fzf
+brew install fzf
 ```
 
 FD
 se usa para buscar archivos es mas rapido
+fd nombreArchivo
 
 ```bash
-winget install sharkdp.fd
+brew install fd
 ```
 
 LSD
 Para listar archivos de mejor manera
 
 ```bash
-winget install --id lsd-rs.lsd
-```
-
-BAT
-Similar al comando CAT de linux
-
-```bash
-winget install sharkdp.bat
-```
-
-Clink
-
-```bash
-winget install clink
-```
-
-RipGrep
-Buscar texto dentro de archivos
-
-```bash
-winget install BurntSushi.ripgrep.MSVC
+brew install lsd
 ```
 
 ## Vscode
