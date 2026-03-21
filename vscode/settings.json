@@ -55,7 +55,7 @@
   // "editor.guides.bracketPairs": true, // mostrar las líneas de los pares de corchetes
   "editor.cursorSmoothCaretAnimation": "on",
   "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.html-language-features"
   },
   "editor.formatOnSave": true, // formatear el código al guardar
   "[typescript]": {
@@ -151,7 +151,15 @@
   },
   "dart.flutterSdkPath": "D:\\flutter",
   "workbench.iconTheme": "symbols",
-  "workbench.statusBar.visible": false,
   "gitlens.ai.model": "vscode",
-  "gitlens.ai.vscode.model": "copilot:gpt-4.1"
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+  "biome.suggestInstallingGlobally": false,
+  "json.schemaDownload.trustedDomains": {
+    "https://schemastore.azurewebsites.net/": true,
+    "https://raw.githubusercontent.com/": true,
+    "https://www.schemastore.org/": true,
+    "https://json.schemastore.org/": true,
+    "https://json-schema.org/": true,
+    "https://biomejs.dev": true
+  }
 }
